@@ -2,7 +2,7 @@
 
 [![Software License](https://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Latest Release](https://img.shields.io/packagist/v/dachcom-digital/dynamic-search-index-provider-opensearch.svg?style=flat-square)](https://packagist.org/packages/dachcom-digital/dynamic-search-index-provider-opensearch)
-[![Tests](https://img.shields.io/github/workflow/status/dachcom-digital/pimcore-dynramic-search-index-provider-opensearch/Codeception/master?style=flat-square&logo=github&label=codeception)](https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch/actions?query=workflow%3ACodeception+branch%3Amaster)
+[![Codeception](https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch/actions/workflows/codeception.yml/badge.svg?branch=main)](https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch/actions/workflows/codeception.yml)
 [![PHP Stan](https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch/actions/workflows/php-stan.yml/badge.svg?branch=main)](https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch/actions/workflows/php-stan.yml)
 
 An index storage extension for [Pimcore Dynamic Search](https://github.com/dachcom-digital/pimcore-dynamic-search).
