@@ -1,6 +1,6 @@
 bundles:
     - { namespace: \DynamicSearchBundle\DynamicSearchBundle }
-    - { namespace: \DsElasticSearchBundle\DsElasticSearchBundle }
+    - { namespace: \DsOpenSearchBundle\DsOpenSearchBundle }
 setup_files:
     - { path: app/config.yml, dest: ./config/config.yaml }
     - { path: app/system.yml, dest: ./var/config/system.yml }
