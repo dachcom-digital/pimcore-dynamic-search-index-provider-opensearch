@@ -71,8 +71,8 @@ dynamic_search:
                             - 'opensearch:9200'
                         settings: []
                         credentials: # optional, empty array
-                            username: '%ES_USERNAME%'
-                            password: '%ES_PASSWORD%'
+                            username: '%OS_USERNAME%'
+                            password: '%OS_PASSWORD%'
                     analysis:
                         analyzer:
                             keyword_analyzer:
