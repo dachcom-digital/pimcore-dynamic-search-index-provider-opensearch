@@ -1,0 +1,14 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    DsOpenSearchBundle\Normalizer\DocumentSourceNormalizer:
+        tags:
+            - { name: dynamic_search.document_normalizer, identifier: os_document_source_normalizer, index_provider: opensearch }
+
+    DsOpenSearchBundle\Normalizer\DocumentRawNormalizer:
+        tags:
+            - { name: dynamic_search.document_normalizer, identifier: os_document_raw_normalizer, index_provider: opensearch }

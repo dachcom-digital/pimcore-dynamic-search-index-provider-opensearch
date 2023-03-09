@@ -1,0 +1,14 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    DsOpenSearchBundle\Index\Field\DynamicField:
+        tags:
+            - { name: dynamic_search.index.field, identifier: dynamic, index_provider: opensearch }
+
+    DsOpenSearchBundle\Index\Field\ExplicitField:
+        tags:
+            - { name: dynamic_search.index.field, identifier: explicit, index_provider: opensearch }

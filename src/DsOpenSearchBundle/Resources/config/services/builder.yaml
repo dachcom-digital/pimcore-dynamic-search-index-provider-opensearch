@@ -1,0 +1,9 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    DsOpenSearchBundle\Builder\ClientBuilderInterface: '@DsOpenSearchBundle\Builder\ClientBuilder'
+    DsOpenSearchBundle\Builder\ClientBuilder: ~

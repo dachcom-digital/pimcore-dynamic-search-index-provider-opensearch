@@ -1,0 +1,13 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    #
+    # Index Provider for Dynamic Search Bundle
+    #
+    DsOpenSearchBundle\Provider\OpenSearchIndexProvider:
+        tags:
+            - { name: dynamic_search.index_provider, identifier: opensearch }

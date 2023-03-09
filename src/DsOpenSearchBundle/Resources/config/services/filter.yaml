@@ -1,0 +1,22 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    DsOpenSearchBundle\OutputChannel\Filter\AggregationFilter:
+        tags:
+            - { name: dynamic_search.index.filter, identifier: aggregation, index_provider: opensearch }
+
+    DsOpenSearchBundle\OutputChannel\Filter\CompositeAggregationFilter:
+        tags:
+            - { name: dynamic_search.index.filter, identifier: composite_aggregation, index_provider: opensearch }
+
+    DsOpenSearchBundle\OutputChannel\Filter\RangeAggregationFilter:
+        tags:
+            - { name: dynamic_search.index.filter, identifier: range_aggregation, index_provider: opensearch }
+
+    DsOpenSearchBundle\OutputChannel\Filter\GeoDistanceFilter:
+        tags:
+            - { name: dynamic_search.index.filter, identifier: geo_distance, index_provider: opensearch }
