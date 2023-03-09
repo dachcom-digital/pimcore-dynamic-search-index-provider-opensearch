@@ -214,9 +214,6 @@ class IndexPersistenceService
             case 'flush':
                 $this->client->indices()->flush();
                 break;
-            case 'flush_synced':
-                $this->client->indices()->flushSynced();
-                break;
             case 'refresh':
                 $this->client->indices()->refresh();
                 break;
