@@ -11,7 +11,7 @@ Store data with the opensearch index service.
 ## Release Plan
 | Release | Supported Pimcore Versions | Supported Symfony Versions | Release Date | Maintained           | Branch                                                                                                 |
 |---------|----------------------------|----------------------------|--------------|----------------------|--------------------------------------------------------------------------------------------------------|
-| **1.x** | `10.0` - `10.5`            | `^5.4`                     | 09.03.2023   | Yes (Bugs, Features) | master                                                                                                 |
+| **1.x** | `10.0` - `10.6`            | `^5.4`                     | 09.03.2023   | Yes (Bugs, Features) | master                                                                                                 |
 ***
 
 ## Installation
