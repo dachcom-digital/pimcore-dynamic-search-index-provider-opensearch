@@ -9,16 +9,17 @@ An index storage extension for [Pimcore Dynamic Search](https://github.com/dachc
 Store data with the opensearch index service.
 
 ## Release Plan
-| Release | Supported Pimcore Versions | Supported Symfony Versions | Release Date | Maintained           | Branch                                                                                                 |
-|---------|----------------------------|----------------------------|--------------|----------------------|--------------------------------------------------------------------------------------------------------|
-| **1.x** | `10.0` - `10.6`            | `^5.4`                     | 09.03.2023   | Yes (Bugs, Features) | master                                                                                                 |
+| Release | Supported Pimcore Versions | Supported Symfony Versions | Release Date | Maintained           | Branch |
+|---------|----------------------------|----------------------------|--------------|----------------------|--------|
+| **2.x** | `11.0`                     | `^6.2`                     | --           | Yes (Bugs, Features) | master |
+| **1.x** | `10.0` - `10.6`            | `^5.4`                     | 09.03.2023   | No                   | 1.x    |
 ***
 
 ## Installation
 ```json
 "require" : {
-    "dachcom-digital/dynamic-search" : "~2.0.0",
-    "dachcom-digital/dynamic-search-index-provider-opensearch" : "~1.0.0"
+    "dachcom-digital/dynamic-search" : "~3.0.0",
+    "dachcom-digital/dynamic-search-index-provider-opensearch" : "~2.0.0"
 }
 ```
 
@@ -27,30 +28,13 @@ You need to install / enable the Dynamic Search Bundle first.
 Read more about it [here](https://github.com/dachcom-digital/pimcore-dynamic-search#installation).
 After that, proceed as followed:
 
-### Enabling via `config/bundles.php`:
+Add Bundle to `bundles.php`:
 ```php
 <?php
 
 return [
     \DsOpenSearchBundle\DsOpenSearchBundle::class => ['all' => true],
 ];
-```
-
-### Enabling via `Kernel.php`:
-```php
-<?php
-
-namespace App;
-
-use Pimcore\HttpKernel\BundleCollection\BundleCollection;
-
-class Kernel extends \Pimcore\Kernel
-{
-    public function registerBundlesToCollection(BundleCollection $collection): void
-    {
-        $collection->addBundle(new \DsOpenSearchBundle\DsOpenSearchBundle());
-    }
-}
 ```
 
 ***
@@ -119,20 +103,20 @@ dynamic_search:
 
 ## Provider Options
 
-| Name                                 | Default Value          | Description |
-|:-------------------------------------|:-----------------------|:------------|
-|`index`                               | []                     |             |
-|`analysis`                            | []                     |             |
+| Name       | Default Value | Description |
+|:-----------|:--------------|:------------|
+| `index`    | []            |             |
+| `analysis` | []            |             |
 
 ***
 
 ## Index Fields
 **Available Index Fields**:
 
-| Name              | Description |
-|:------------------|:------------|
-|`dynamic`           | TBD |
-|`explicit`          | TBD |
+| Name       | Description |
+|:-----------|:------------|
+| `dynamic`  | TBD         |
+| `explicit` | TBD         |
 
 ***
 
@@ -145,9 +129,9 @@ You're able to modify the search by hooking via `dynamic_search.output_channel.m
 **Identifier**: `opensearch_search`   
 **Available Options**:
 
-| Name                             | Default Value | Description |
-|:---------------------------------|:--------------|:------------|
-|`result_limit`                    | 10            |             |
+| Name           | Default Value | Description |
+|:---------------|:--------------|:------------|
+| `result_limit` | 10            |             |
 
 ### Multi Search
 **Identifier**: `TBD`   
@@ -191,3 +175,6 @@ $  bin/console dynamic-search:os:rebuild-index -c default
 ## Copyright and License
 Copyright: [DACHCOM.DIGITAL](http://dachcom-digital.com)  
 For licensing details please visit [LICENSE.md](./LICENSE.md)
+
+## Upgrade Info
+Before updating, please [check our upgrade notes!](./UPGRADE.md)  

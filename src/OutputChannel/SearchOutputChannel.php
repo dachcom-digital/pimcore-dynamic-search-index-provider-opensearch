@@ -14,13 +14,11 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 class SearchOutputChannel implements OutputChannelInterface
 {
     protected array $options;
-    protected ClientBuilderInterface $clientBuilder;
     protected OutputChannelContextInterface $outputChannelContext;
     protected OutputChannelModifierEventDispatcher $eventDispatcher;
 
-    public function __construct(ClientBuilderInterface $clientBuilder)
+    public function __construct(protected ClientBuilderInterface $clientBuilder)
     {
-        $this->clientBuilder = $clientBuilder;
     }
 
     public static function configureOptions(OptionsResolver $resolver): void
