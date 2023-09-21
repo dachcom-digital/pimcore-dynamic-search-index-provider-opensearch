@@ -1,39 +1,51 @@
 {
-  "name": "dachcom-digital/dynamic-search-index-provider-opensearch",
-  "type": "dynamic-search-provider-bundle",
-  "license": "GPL-3.0-or-later",
-  "description": "",
-  "keywords": ["pimcore", "search", "dynamic-search", "index-provider","opensearch"],
-  "homepage": "https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch",
-  "authors": [
-    {
-      "name": "DACHCOM.DIGITAL Robert Kaczmarczyk",
-      "email": "rkaczmarczyk@dachcom.ch",
-      "homepage": "http://www.dachcom.com/",
-      "role": "Developer"
+    "name": "dachcom-digital/dynamic-search-index-provider-opensearch",
+    "type": "dynamic-search-provider-bundle",
+    "license": "GPL-3.0-or-later",
+    "description": "",
+    "keywords": [
+        "pimcore",
+        "search",
+        "dynamic-search",
+        "index-provider",
+        "opensearch"
+    ],
+    "homepage": "https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch",
+    "authors": [
+        {
+            "name": "DACHCOM.DIGITAL Robert Kaczmarczyk",
+            "email": "rkaczmarczyk@dachcom.ch",
+            "homepage": "http://www.dachcom.com/",
+            "role": "Developer"
+        },
+        {
+            "name": "DACHCOM.DIGITAL Stefan Hagspiel",
+            "email": "shagspiel@dachcom.ch",
+            "homepage": "http://www.dachcom.com/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DsOpenSearchBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "pimcore/pimcore": "^11",
+        "dachcom-digital/dynamic-search": "^3.0",
+        "opensearch-project/opensearch-php": "^2.1",
+        "smoench/opensearch-dsl": "^1.2"
+    },
+    "require-dev": {
+        "codeception/codeception": "^5.0",
+        "codeception/module-symfony": "^3.1",
+        "phpstan/phpstan": "^1.0",
+        "phpstan/phpstan-symfony": "^1.0",
+        "symplify/easy-coding-standard": "^9.0"
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "DsOpenSearchBundle\\": "src/DsOpenSearchBundle"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "": "src/"
-    }
-  },
-  "require": {
-    "pimcore/pimcore": "^10.1",
-    "dachcom-digital/dynamic-search": "^2.0",
-    "opensearch-project/opensearch-php": "^2.1",
-    "smoench/opensearch-dsl": "^1.2"
-  },
-  "require-dev": {
-    "codeception/codeception": "^4.1",
-    "codeception/module-symfony": "^1.6",
-    "phpstan/phpstan": "^0.12",
-    "phpstan/phpstan-symfony": "^0.12",
-    "symplify/easy-coding-standard": "^9.0"
-  }
 }

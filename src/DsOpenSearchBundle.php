@@ -3,16 +3,15 @@
 namespace DsOpenSearchBundle;
 
 use DynamicSearchBundle\Provider\Extension\ProviderBundleInterface;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 final class DsOpenSearchBundle extends Bundle implements ProviderBundleInterface
 {
     public const PROVIDER_NAME = 'opensearch';
 
-    public function build(ContainerBuilder $container): void
+    public function getPath(): string
     {
-        parent::build($container);
+        return \dirname(__DIR__);
     }
 
     public function getProviderName(): string
