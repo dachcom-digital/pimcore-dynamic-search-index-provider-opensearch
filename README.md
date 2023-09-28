@@ -9,10 +9,11 @@ An index storage extension for [Pimcore Dynamic Search](https://github.com/dachc
 Store data with the opensearch index service.
 
 ## Release Plan
-| Release | Supported Pimcore Versions | Supported Symfony Versions | Release Date | Maintained           | Branch |
-|---------|----------------------------|----------------------------|--------------|----------------------|--------|
-| **2.x** | `11.0`                     | `^6.2`                     | --           | Yes (Bugs, Features) | master |
-| **1.x** | `10.0` - `10.6`            | `^5.4`                     | 09.03.2023   | No                   | 1.x    |
+| Release | Supported Pimcore Versions | Supported Symfony Versions | Release Date | Maintained     | Branch |
+|---------|----------------------------|----------------------------|--------------|----------------|--------|
+| **2.x** | `11.0`                     | `^6.2`                     | 28.09.2023   | Feature Branch | master |
+| **1.x** | `10.0` - `10.6`            | `^5.4`                     | 09.03.2023   | No             | 1.x    |
+
 ***
 
 ## Installation
