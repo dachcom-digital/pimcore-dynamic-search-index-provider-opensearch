@@ -23,13 +23,14 @@ class AggregationFilter implements FilterInterface
 
     public function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver->setRequired(['label', 'show_in_frontend', 'add_as_post_filter', 'multiple', 'relation_label', 'field', 'query_type']);
+        $resolver->setRequired(['label', 'show_in_frontend', 'add_as_post_filter', 'multiple', 'relation_label', 'field', 'size', 'query_type']);
         $resolver->setAllowedTypes('show_in_frontend', ['bool']);
         $resolver->setAllowedTypes('add_as_post_filter', ['bool']);
         $resolver->setAllowedTypes('multiple', ['bool']);
         $resolver->setAllowedTypes('label', ['string', 'null']);
         $resolver->setAllowedTypes('relation_label', ['closure', 'null']);
         $resolver->setAllowedTypes('field', ['string']);
+        $resolver->setAllowedTypes('size', ['int']);
         $resolver->setAllowedTypes('query_type', ['string']);
 
         $resolver->setDefaults([
@@ -40,6 +41,7 @@ class AggregationFilter implements FilterInterface
             'relation_label'     => null,
             'label'              => null,
             'field'              => null,
+            'size'               => 10,
         ]);
     }
 
@@ -78,6 +80,7 @@ class AggregationFilter implements FilterInterface
         $queryFields = $runtimeOptions['request_query_vars'];
 
         $termsAggregation = new TermsAggregation($this->name, $this->options['field']);
+        $termsAggregation->addParameter('size', $this->options['size']);
         $query->addAggregation($termsAggregation);
 
         $this->addQueryFilter($query, $queryFields);
