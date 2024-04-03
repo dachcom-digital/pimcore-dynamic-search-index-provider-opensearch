@@ -37,7 +37,7 @@
     },
     "require": {
         "pimcore/pimcore": "^11",
-        "dachcom-digital/dynamic-search": "^3.0",
+        "dachcom-digital/dynamic-search": "^3.0 || ^4.0",
         "opensearch-project/opensearch-php": "^2.1",
         "smoench/opensearch-dsl": "^1.2"
     },
