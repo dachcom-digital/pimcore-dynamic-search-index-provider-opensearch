@@ -38,6 +38,7 @@ class CompositeAggregationFilter extends AggregationFilter implements FilterInte
         $compositeAggregation = new CompositeAggregation(
             $this->name
         );
+        $compositeAggregation->addParameter('size', $this->options['size']);
         foreach ($this->options['fields'] as $field) {
             $termsAggregation = new TermsAggregation($field, $field);
             $termsAggregation->setParameters(['missing_bucket' => true]);
