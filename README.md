@@ -173,9 +173,12 @@ $  bin/console dynamic-search:os:rebuild-index -c default
 
 ***
 
-## Copyright and License
-Copyright: [DACHCOM.DIGITAL](http://dachcom-digital.com)  
-For licensing details please visit [LICENSE.md](./LICENSE.md)
+## License
+**DACHCOM.DIGITAL AG**, Löwenhofstrasse 15, 9424 Rheineck, Schweiz  
+[dachcom.com](https://www.dachcom.com), dcdi@dachcom.ch  
+Copyright © 2024 DACHCOM.DIGITAL. All rights reserved.  
+
+For licensing details please visit [LICENSE.md](LICENSE.md)  
 
 ## Upgrade Info
 Before updating, please [check our upgrade notes!](./UPGRADE.md)  
