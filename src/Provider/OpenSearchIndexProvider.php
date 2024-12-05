@@ -183,7 +183,7 @@ class OpenSearchIndexProvider implements IndexProviderInterface, PreConfiguredIn
         }
 
         $this->logger->debug(
-            sprintf('Adding document with id %s to elasticsearch index "%s"', $indexDocument->getDocumentId(), $this->options['index']['identifier']),
+            sprintf('Adding document with id %s to opensearch index "%s"', $indexDocument->getDocumentId(), $this->options['index']['identifier']),
             DsOpenSearchBundle::PROVIDER_NAME,
             $contextDefinition->getName()
         );
@@ -209,7 +209,7 @@ class OpenSearchIndexProvider implements IndexProviderInterface, PreConfiguredIn
         }
 
         $this->logger->debug(
-            sprintf('Adding document with id %s to elasticsearch index "%s"', $indexDocument->getDocumentId(), $this->options['index']['identifier']),
+            sprintf('Adding document with id %s to opensearch index "%s"', $indexDocument->getDocumentId(), $this->options['index']['identifier']),
             DsOpenSearchBundle::PROVIDER_NAME,
             $contextDefinition->getName()
         );
