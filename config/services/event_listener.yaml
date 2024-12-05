@@ -1,0 +1,10 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    DsOpenSearchBundle\EventListener\Admin\AssetListener:
+        tags:
+            - { name: kernel.event_subscriber }

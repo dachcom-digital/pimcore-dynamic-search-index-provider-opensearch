@@ -1,0 +1,6 @@
+ds_opensearch_controller_admin_index_rebuild_mapping:
+    path: /admin/ds-index-provider-opensearch/index/rebuild-mapping
+    methods: [ POST ]
+    defaults: { _controller: DsOpenSearchBundle\Controller\Admin\IndexController::rebuildMappingAction }
+    options:
+        expose: true

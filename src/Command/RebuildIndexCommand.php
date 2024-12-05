@@ -14,6 +14,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ConfirmationQuestion;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class RebuildIndexCommand extends Command
 {
@@ -23,7 +24,8 @@ class RebuildIndexCommand extends Command
     public function __construct(
         protected ContextDefinitionBuilderInterface $contextDefinitionBuilder,
         protected IndexDocumentGeneratorInterface $indexDocumentGenerator,
-        protected ClientBuilderInterface $clientBuilder
+        protected ClientBuilderInterface $clientBuilder,
+        protected TranslatorInterface $translator
     ) {
         parent::__construct();
     }
@@ -83,7 +85,7 @@ class RebuildIndexCommand extends Command
             /** @var QuestionHelper $helper */
             $helper = $this->getHelper('question');
 
-            $text = 'This command will drop the selected index and all data will be lost! Continue?';
+            $text = $this->translator->trans('ds_index_provider_opensearch.actions.index.rebuild_mapping.confirmation.message', [], 'admin');
             $commandText = sprintf(' <info>%s (y/n)</info> [<comment>%s</comment>]:', $text, 'no');
             $question = new ConfirmationQuestion($commandText, false);
 
@@ -106,7 +108,7 @@ class RebuildIndexCommand extends Command
             return 0;
         }
 
-        $output->writeln('<info>Index rebuild was successful</info>');
+        $output->writeln(sprintf('<info>%s</info>', $this->translator->trans('ds_index_provider_opensearch.actions.index.rebuild_mapping.success', [], 'admin')));
 
         return 0;
     }
