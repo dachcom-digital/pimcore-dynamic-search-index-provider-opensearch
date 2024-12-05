@@ -6,7 +6,5 @@ services:
         public: false
 
     DsOpenSearchBundle\Command\RebuildIndexCommand:
-        arguments:
-            $dsFullConfiguration: '%dynamic_search.context.full_configuration%'
         tags:
             - { name: console.command}

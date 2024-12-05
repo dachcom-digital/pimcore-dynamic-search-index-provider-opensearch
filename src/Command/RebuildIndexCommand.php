@@ -21,7 +21,6 @@ class RebuildIndexCommand extends Command
     protected static $defaultDescription = 'Rebuild Index Mapping';
 
     public function __construct(
-        protected array $dsFullConfiguration,
         protected ContextDefinitionBuilderInterface $contextDefinitionBuilder,
         protected IndexDocumentGeneratorInterface $indexDocumentGenerator,
         protected ClientBuilderInterface $clientBuilder
@@ -74,7 +73,7 @@ class RebuildIndexCommand extends Command
             return 0;
         }
 
-        $options = $this->dsFullConfiguration[$contextName]['index_provider']['options'];
+        $options = $contextDefinition->getIndexProviderOptions();
 
         $client = $this->clientBuilder->build($options);
         $indexService = new IndexPersistenceService($client, $options);
