@@ -5,6 +5,6 @@ services:
         autoconfigure: true
         public: false
 
-    DsOpenSearchBundle\Command\RebuildIndexCommand:
+    DsOpenSearchBundle\EventListener\Admin\AssetListener:
         tags:
-            - { name: console.command}
+            - { name: kernel.event_subscriber }

@@ -1,0 +1,3 @@
+ds_index_provider_opensearch.actions.index.rebuild_mapping: 'Index mapping neu erstellen'
+ds_index_provider_opensearch.actions.index.rebuild_mapping.confirmation.message: 'Das Index mapping wird neu erstellt. Dadurch wird der ganze Index gelöscht und alle Daten verloren! Fortfahren?'
+ds_index_provider_opensearch.actions.index.rebuild_mapping.success: 'Index mapping neu erstellt'

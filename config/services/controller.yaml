@@ -1,0 +1,10 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    DsOpenSearchBundle\Controller\Admin\IndexController:
+        tags:
+            - 'controller.service_arguments'

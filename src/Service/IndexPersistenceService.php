@@ -230,11 +230,6 @@ class IndexPersistenceService
         return $this->client->indices()->refresh(array_merge(['index' => $this->getIndexName()], $params));
     }
 
-    public function clearElasticIndexCache(): array
-    {
-        return $this->client->indices()->clearCache(['index' => $this->getIndexName()]);
-    }
-
     protected function getIndexName(): string
     {
         return $this->indexOptions['index']['identifier'];

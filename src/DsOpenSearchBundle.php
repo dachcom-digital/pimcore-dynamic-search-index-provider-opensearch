@@ -3,9 +3,10 @@
 namespace DsOpenSearchBundle;
 
 use DynamicSearchBundle\Provider\Extension\ProviderBundleInterface;
+use Pimcore\Extension\Bundle\AbstractPimcoreBundle;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class DsOpenSearchBundle extends Bundle implements ProviderBundleInterface
+final class DsOpenSearchBundle extends AbstractPimcoreBundle implements ProviderBundleInterface
 {
     public const PROVIDER_NAME = 'opensearch';
 

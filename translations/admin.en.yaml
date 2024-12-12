@@ -1,0 +1,3 @@
+ds_index_provider_opensearch.actions.index.rebuild_mapping: 'Rebuild index mapping'
+ds_index_provider_opensearch.actions.index.rebuild_mapping.confirmation.message: 'This will drop the selected index and all data will be lost! Continue?'
+ds_index_provider_opensearch.actions.index.rebuild_mapping.success: 'Index rebuild was successful'
