@@ -1,6 +1,7 @@
-# Dynamic Search | Index Provider: Opensearch
+# Dynamic Search | Index Provider: OpenSearch
 
 [![Software License](https://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Software License](https://img.shields.io/badge/license-DCL-white.svg?style=flat-square&color=%23ff5c5c)](LICENSE.md)
 [![Latest Release](https://img.shields.io/packagist/v/dachcom-digital/dynamic-search-index-provider-opensearch.svg?style=flat-square)](https://packagist.org/packages/dachcom-digital/dynamic-search-index-provider-opensearch)
 [![Codeception](https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch/actions/workflows/codeception.yml/badge.svg?branch=main)](https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch/actions/workflows/codeception.yml)
 [![PHP Stan](https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch/actions/workflows/php-stan.yml/badge.svg?branch=main)](https://github.com/dachcom-digital/pimcore-dynamic-search-index-provider-opensearch/actions/workflows/php-stan.yml)
@@ -11,7 +12,7 @@ Store data with the opensearch index service.
 ## Release Plan
 | Release | Supported Pimcore Versions | Supported Symfony Versions | Release Date | Maintained     | Branch |
 |---------|----------------------------|----------------------------|--------------|----------------|--------|
-| **2.x** | `11.0`                     | `^6.2`                     | 28.09.2023   | Feature Branch | master |
+| **2.x** | `11.0`                     | `^6.4`                     | 28.09.2023   | Feature Branch | master |
 | **1.x** | `10.0` - `10.6`            | `^5.4`                     | 09.03.2023   | No             | 1.x    |
 
 ***
@@ -173,12 +174,12 @@ $  bin/console dynamic-search:os:rebuild-index -c default
 
 ***
 
+## Upgrade Info
+Before updating, please [check our upgrade notes!](./UPGRADE.md)  
+
 ## License
 **DACHCOM.DIGITAL AG**, Löwenhofstrasse 15, 9424 Rheineck, Schweiz  
 [dachcom.com](https://www.dachcom.com), dcdi@dachcom.ch  
-Copyright © 2024 DACHCOM.DIGITAL. All rights reserved.  
+Copyright © 2025 DACHCOM.DIGITAL. All rights reserved.  
 
 For licensing details please visit [LICENSE.md](LICENSE.md)  
-
-## Upgrade Info
-Before updating, please [check our upgrade notes!](./UPGRADE.md)  
