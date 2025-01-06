@@ -69,11 +69,8 @@ class GeoDistanceFilter extends AggregationFilter
         if (empty($coordinatesRaw)) {
             return;
         }
-        $coordinates = array_map('floatval', explode(',', $coordinatesRaw));
 
-        if (!is_array($coordinates)) {
-            return;
-        }
+        $coordinates = array_map('floatval', explode(',', $coordinatesRaw));
 
         $distance = $queryFields[$distanceFieldName];
         if (is_numeric($distance)) {
