@@ -1,7 +1,10 @@
 {
     "name": "dachcom-digital/dynamic-search-index-provider-opensearch",
     "type": "dynamic-search-provider-bundle",
-    "license": "GPL-3.0-or-later",
+    "license": [
+        "GPL-3.0-or-later",
+        "proprietary"
+    ],
     "description": "",
     "keywords": [
         "pimcore",
@@ -15,13 +18,13 @@
         {
             "name": "DACHCOM.DIGITAL Robert Kaczmarczyk",
             "email": "rkaczmarczyk@dachcom.ch",
-            "homepage": "http://www.dachcom.com/",
+            "homepage": "https://www.dachcom.com/",
             "role": "Developer"
         },
         {
             "name": "DACHCOM.DIGITAL Stefan Hagspiel",
             "email": "shagspiel@dachcom.ch",
-            "homepage": "http://www.dachcom.com/",
+            "homepage": "https://www.dachcom.com/",
             "role": "Developer"
         }
     ],
@@ -36,7 +39,7 @@
         }
     },
     "require": {
-        "pimcore/pimcore": "^11",
+        "pimcore/pimcore": "^11.0",
         "dachcom-digital/dynamic-search": "^3.0 || ^4.0",
         "opensearch-project/opensearch-php": "^2.1",
         "smoench/opensearch-dsl": "^1.2"
@@ -44,8 +47,8 @@
     "require-dev": {
         "codeception/codeception": "^5.0",
         "codeception/module-symfony": "^3.1",
-        "phpstan/phpstan": "^1.0",
-        "phpstan/phpstan-symfony": "^1.0",
-        "symplify/easy-coding-standard": "^9.0"
+        "phpstan/phpstan": "^2.0",
+        "phpstan/phpstan-symfony": "^2.0",
+        "symplify/easy-coding-standard": "~12.2.0"
     }
 }
