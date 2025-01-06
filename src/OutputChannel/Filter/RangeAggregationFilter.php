@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * This source file is available under two different licenses:
+ *   - GNU General Public License version 3 (GPLv3)
+ *   - DACHCOM Commercial License (DCL)
+ * Full copyright and license information is available in
+ * LICENSE.md which is distributed with this source code.
+ *
+ * @copyright  Copyright (c) DACHCOM.DIGITAL AG (https://www.dachcom-digital.com)
+ * @license    GPLv3 and DCL
+ */
+
 namespace DsOpenSearchBundle\OutputChannel\Filter;
 
 use DynamicSearchBundle\Filter\FilterInterface;
@@ -49,7 +60,7 @@ class RangeAggregationFilter extends AggregationFilter implements FilterInterfac
         $response = $rawResult->getParameter('fullDatabaseResponse');
 
         $viewVars = [
-            'name' => $this->name,
+            'name'     => $this->name,
             'template' => [sprintf('%s/%s.html.twig', self::VIEW_TEMPLATE_PATH, $this->name), sprintf('%s/aggregation.html.twig', self::VIEW_TEMPLATE_PATH)],
             'label'    => $this->options['label'],
             'multiple' => $this->options['multiple'],

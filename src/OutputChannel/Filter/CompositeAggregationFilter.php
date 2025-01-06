@@ -1,5 +1,16 @@
 <?php
 
+/*
+ * This source file is available under two different licenses:
+ *   - GNU General Public License version 3 (GPLv3)
+ *   - DACHCOM Commercial License (DCL)
+ * Full copyright and license information is available in
+ * LICENSE.md which is distributed with this source code.
+ *
+ * @copyright  Copyright (c) DACHCOM.DIGITAL AG (https://www.dachcom-digital.com)
+ * @license    GPLv3 and DCL
+ */
+
 namespace DsOpenSearchBundle\OutputChannel\Filter;
 
 use DynamicSearchBundle\Filter\FilterInterface;
@@ -58,7 +69,6 @@ class CompositeAggregationFilter extends AggregationFilter implements FilterInte
         }
 
         foreach ($queryFields as $key => $value) {
-
             if ($key !== $this->name) {
                 continue;
             }
@@ -93,7 +103,6 @@ class CompositeAggregationFilter extends AggregationFilter implements FilterInte
                 $query->addQuery($boolQuery);
             }
         }
-
     }
 
     protected function buildResultArray(array $buckets): array
@@ -106,7 +115,6 @@ class CompositeAggregationFilter extends AggregationFilter implements FilterInte
 
         $values = [];
         foreach ($buckets as $bucket) {
-
             $bucketValue = rtrim(implode($this->options['separator'], array_values($bucket['key'])), $this->options['separator']);
 
             $relationLabel = null;
