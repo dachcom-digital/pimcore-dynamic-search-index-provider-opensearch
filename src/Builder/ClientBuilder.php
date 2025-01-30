@@ -28,8 +28,26 @@ class ClientBuilder implements ClientBuilderInterface
         $client = \OpenSearch\ClientBuilder::create();
         $client->setHosts($indexOptions['index']['hosts']);
 
-        if (!empty($indexOptions['index']['credentials']['username']) && $indexOptions['index']['credentials']['password']) {
-            $client->setBasicAuthentication($indexOptions['index']['credentials']['username'], $indexOptions['index']['credentials']['password']);
+        $credentials = $indexOptions['index']['credentials'];
+
+        if (!empty($credentials['username']) && $credentials['password']) {
+            $client->setBasicAuthentication($credentials['username'], $credentials['password']);
+        } else {
+            if (!empty($credentials['sig_v4_region'])) {
+                $client->setSigV4Region($credentials['sig_v4_region']);
+            }
+
+            if (!empty($credentials['sig_v4_service'])) {
+                $client->setSigV4Service($credentials['sig_v4_service']);
+            }
+
+            if ($credentials['sig_v4_credential_provider'] !== null) {
+                $client->setSigV4CredentialProvider($credentials['sig_v4_credential_provider']);
+            }
+        }
+
+        if ($credentials['ssl_verification'] !== null) {
+            $client->setSSLVerification($credentials['ssl_verification']);
         }
 
         return $client->build();

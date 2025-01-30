@@ -13,6 +13,7 @@
 
 namespace DsOpenSearchBundle\Provider;
 
+use Aws\Credentials\CredentialsInterface;
 use DsOpenSearchBundle\Builder\ClientBuilderInterface;
 use DsOpenSearchBundle\DsOpenSearchBundle;
 use DsOpenSearchBundle\Service\IndexPersistenceService;
@@ -48,10 +49,23 @@ class OpenSearchIndexProvider implements IndexProviderInterface, PreConfiguredIn
                         $spoolResolver->setDefaults([
                             'username' => null,
                             'password' => null,
+                            'ssl_verification' => null,
+                            'sig_v4_region' => null,
+                            'sig_v4_credential_provider' => null,
                         ]);
 
                         $spoolResolver->setAllowedTypes('username', ['string', 'null']);
                         $spoolResolver->setAllowedTypes('password', ['string', 'null']);
+                        $spoolResolver->setAllowedTypes('ssl_verification', ['bool', 'string', 'null']);
+                        $spoolResolver->setAllowedTypes('sig_v4_region', ['string', 'null']);
+                        $spoolResolver->setAllowedTypes('sig_v4_service', ['string', 'null']);
+                        $spoolResolver->setAllowedTypes('sig_v4_credential_provider', [
+                            'array',
+                            'bool',
+                            'callable',
+                            CredentialsInterface::class,
+                            'null'
+                        ]);
                     },
                 ]);
 
